@@ -1,0 +1,18 @@
+<nav>
+{% for menu in menus %}
+
+        <a href="#">
+            {{ menu.menu_name }}
+        </a>
+        <ul>
+          {% for item in menu.items %}
+            <li>
+              <a href="{{ item.link_external }}" target="_blank">
+                {{ item.text }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+
+{% endfor %}
+</nav>
